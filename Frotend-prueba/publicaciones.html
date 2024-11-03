@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/publicaciones.css"> <!-- Enlace al CSS -->
+    <title>Publicaciones</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de Publicaciones</h1>
+        <a href="/publicaciones" class="btn">Crear Nueva Publicación</a>
+    </header>
+
+    <main>
+        <div class="publicaciones-container">
+            <h2>Publicaciones</h2>
+            <ul id="publicaciones-list">
+                <!-- Aquí se llenará la lista de publicaciones -->
+                <th:block th:each="publicacion : ${publicaciones}">
+                    <li>
+                        <h3 th:text="${publicacion.titulo}"></h3>
+                        <p th:text="${publicacion.descripcion}"></p>
+                        <p>Tipo: <span th:text="${publicacion.tipoPublicacion}"></span></p>
+                        <p>Fecha: <span th:text="${publicacion.fechaPublicacion}"></span></p>
+                    </li>
+                </th:block>
+            </ul>
+        </div>
+    </main>
+
+    <table>
+        <tr>
+            <th>Usuario</th>
+            <th>Animal</th>
+            <th>Tipo de Publicación</th>
+        </tr>
+        <th:block th:each="publicacion : ${publicaciones}">
+            <tr>
+                <td th:text="${publicacion.cliente.nombre}"></td>
+                <td th:text="${publicacion.animal.nombre}"></td>
+                <td th:text="${publicacion.tipoPublicacion}"></td>
+            </tr>
+        </th:block>
+    </table>
+
+    <footer>
+        <p>&copy; 2024 Kleanimals</p>
+    </footer>
+
+    <script src="/Js/script.js"></script> <!-- Enlace al JS -->
+</body>
+</html>

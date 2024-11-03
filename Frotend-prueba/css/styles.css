@@ -1,0 +1,546 @@
+body{
+    background-color: #FBE5DA;
+}
+
+/* Estilo general de la barra de navegación */
+.navbar {
+
+    background: #F5F5DC !important;
+  }
+  
+  /* Estilo para el logo de la marca */
+  .navbar-brand img {
+    width: 200px; /* Ajusta el ancho del logo */
+    height: 60px; /* Ajusta el alto del logo */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+    
+  }
+  
+  /* Color y estilo de los enlaces */
+  .navbar-nav .nav-link {
+    color: #000 !important; /* Color de los enlaces */
+    font-weight: 500; /* Peso de fuente para mejor visibilidad */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f0d68b !important; /* Color al pasar el cursor */
+  }
+  
+  /* Color y estilo del enlace activo */
+  .navbar-nav .nav-link.active {
+    color: #f0d68b ;
+    font-weight: 600; /* Peso de fuente más fuerte para el enlace activo */
+  }
+  
+  /* Dropdown personalizado */
+  .dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1; /* Fondo al pasar el cursor en el dropdown */
+  }
+  
+  /* Estilo para el botón de colapso en dispositivos móviles */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+
+.hero {
+    background-image: url('/Frotend-prueba/images/Slice\ 3\ 1.jpg'); /* Coloca la URL de la imagen */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #fdf6e3;
+    text-align: left;
+    position: relative;
+    min-height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurecer un poco la imagen de fondo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #EBDDAE;
+}
+.hero p {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    color: #EBDDAE;
+}
+.hero .btn-hero {
+    background-color: #f0d68b;
+    color: #5d5449;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+}
+.hero .btn-hero:hover {
+    background-color: #e4b864;
+}
+
+.titulo h2{
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 36px;
+    
+}
+
+.container_acerca{
+    display: flex;
+    margin-top: 50px;
+    background-color: #766C66;
+    padding: 30px;
+}
+
+.texto h2 {
+    color: #BF985F;
+    text-align: center;
+    margin: 10px;
+}
+
+.texto p {
+    color: white;
+    text-align: center;
+    margin: 50px;
+    font-size: 20px;
+}
+
+.imagen_about img {
+    width: 500px;
+    padding: auto;
+    margin-right: 20px;
+    
+}
+
+@media (max-width: 992px) {
+    .container_acerca {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .texto p {
+        margin: 30px 20px; /* Reduce el margen en pantallas más pequeñas */
+        font-size: 18px; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    .imagen_about img {
+        width: 400px; /* Ajusta el tamaño de la imagen */
+    }
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container_acerca {
+        padding: 20px; /* Reduce el padding */
+    }
+
+    .texto h2 {
+        font-size: 24px; /* Reduce el tamaño del encabezado */
+    }
+
+    .texto p {
+        margin: 20px;
+        font-size: 16px; /* Texto más pequeño para pantallas pequeñas */
+    }
+
+    .imagen_about img {
+        width: 300px; /* Imagen más pequeña para pantallas pequeñas */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (móviles pequeños) */
+@media (max-width: 576px) {
+    .texto p {
+        margin: 15px;
+        font-size: 14px; /* Aún más pequeño el texto para móviles pequeños */
+    }
+
+    .imagen_about img {
+        width: 250px; /* Reduce más la imagen */
+    }
+}
+
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 20px;
+    margin-bottom: 100px;
+
+}
+
+.card {
+    background-color: #f5f5dc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 10px;
+    flex: 1;
+    text-align: justify;  /* Justificación de texto */
+}
+
+.card-img {
+    display: block; /* Cambia a bloque para centrar */
+    width: 100px; /* Mantén el ancho */
+    margin: 0 auto 20px auto; /* Centra horizontalmente */
+}
+
+.card h3 {
+    color: #BF985F;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #BF985F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #8C6C42;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        max-width: 90%;
+    }
+}
+
+.titulo_cartas {
+    text-align: center;
+    margin-top: 40px;
+    color: #BF985F;
+}
+
+.rastreo-animal {
+    position: relative;
+    background-image: url('/Frotend-prueba/images/🌎\ Map\ Maker_\ Cali\,\ Valle\ del\ Cauca\,\ Colombia\,\ \(Standard\).png'); /* Aquí colocas la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Ajusta la altura según sea necesario */
+}
+
+.rastreo-animal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 para ajustar la opacidad, siendo 1 completamente opaco */
+    z-index: 1;
+}
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.overlay h1 {
+    font-size: 2.5em;
+    color: #F5E5B8;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.overlay p {
+    background-color: #F0D891;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    text-shadow: none;
+    font-size: 1.2em;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .rastreo-animal {
+        height: 200px;
+    }
+
+    .overlay h1 {
+        font-size: 2em;
+    }
+
+    .overlay p {
+        font-size: 1em;
+    }
+}
+
+/* Footer General */
+.footer {
+    background-color: #F5F5DC;
+    padding: 40px 20px;
+    color: #3F3D3B;
+    font-family: Arial, sans-serif;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+    text-align: justify;  /* Justificación de texto */
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    color: #BF985F;
+    margin-bottom: 15px;
+}
+
+.footer-section p, 
+.footer-section ul {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #3F3D3B;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #3F3D3B;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #BF985F;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #BF985F;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    color: #3F3D3B;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+    }
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 55px 100px;
+    justify-items: center;
+    
+}
+
+.formulario-content{
+    
+    width: 800px;
+
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #F5F5DC;
+    /* Small Card Blur */
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.tituloform{
+    height: 60px;
+    flex-shrink: 0;
+    background: #BF985F;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    
+    
+    
+}
+
+.tituloform h2{
+color: #FFF;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+
+}
+
+/* Estilos generales del formulario */
+form {
+
+    margin: 0 auto; /* Centrado en la página */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+  }
+  
+  /* Estilo de etiquetas */
+  .form-label {
+    font-weight: 600;
+    color: #BF985F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  /* Estilo de los campos de entrada */
+  .form-control {
+    border-radius: 35px;
+    border: 1px solid #BF985F;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.00);
+  }
+  
+
+
+
+  
+  /* Estilo del botón de envío */
+  .btn-primary {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #BF985F;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  
+  /* Estilo de la casilla de verificación */
+  .form-check-input {
+    border-radius: 100x;
+    border-color: #BF985F;
+  }
+  
+  .form-check-label {
+    margin-left: 5px;
+    color: #555;
+  }
+  
+
+  @media (max-width: 992px) { /* Para pantallas de tamaño mediano */
+    .formulario-content {
+        width: 600px;
+    }
+
+    .tituloform h2 {
+        font-size: 22px;
+    }
+
+    .btn-primary {
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) { /* Para tablets y pantallas pequeñas */
+    .formulario {
+        margin: 30px 20px;
+    }
+
+    .formulario-content {
+        width: 100%; /* Ocupa el ancho completo */
+        padding: 10px;
+    }
+
+    .tituloform h2 {
+        font-size: 20px;
+    }
+
+    .btn-primary {
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) { /* Para dispositivos móviles */
+    .formulario-content {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .tituloform {
+        height: 50px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .tituloform h2 {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        height: 40px;
+        font-size: 14px;
+    }
+}

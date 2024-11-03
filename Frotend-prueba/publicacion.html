@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/publicacion.css">
+    <title>Formulario de Publicación</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Publicar Animal</h1>
+        <form id="publicacionForm" method="POST" enctype="multipart/form-data">
+            <div id="camposGenerales">
+                <label for="tipoPublicacion">Tipo de Publicación:</label>
+                <input type="hidden" id="tipoPublicacion" name="tipoPublicacion" value="">
+              
+                <h2>Información General del Animal</h2>
+                <label for="especie">Tipo de Animal:</label>
+                <select id="especie" name="especie" required>
+                    <option value="" disabled selected>-- Selecciona un tipo de animal --</option>
+                </select>
+
+                <label for="edad">Edad:</label>
+                <select id="edad" name="edad" required>
+                    <option value="" disabled selected>-- Selecciona la edad --</option>
+                </select>
+
+                <label for="tamano">Tamaño:</label>
+                <select id="tamano" name="tamano" required>
+                    <option value="" disabled selected>-- Selecciona el tamaño --</option>
+                </select>
+
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" required>
+
+                <label for="patrones">Patrones:</label>
+                <input type="text" id="patrones" name="patrones">
+            </div>
+
+            <div id="camposAdicionales" style="display: none;">
+                <h2>Ubicación y Fecha</h2>
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" required>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div id="camposContacto">
+                <h2>Información de Contacto</h2>
+
+                <input type="hidden" id="usuarioId" name="usuarioId" value="${usuario.id}">
+
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div id="camposDescripcion" style="display: none;">
+                <h2>Descripción del Animal</h2>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+
+                <label for="video">Video (opcional):</label>
+                <input type="file" id="video" name="video" accept="video/*">
+
+                <label for="galeria">Galería de Imágenes:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" multiple>
+            </div>
+
+            <button type="submit">Publicar</button>
+        </form>
+    </div>
+    <script src="Js/publicacion.js"></script>
+</body>
+</html>
