@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - CRUD de Animal Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Administración de Animal Post</h1>
+
+    <!-- Formulario de Filtros -->
+    <h2>Filtrar Animal Posts</h2>
+    <form id="filterForm">
+        <label for="especie">Especie:</label>
+        <select id="especie">
+            <option value="">Todas</option>
+        </select>
+
+        <label for="edad">Edad:</label>
+        <select id="edad">
+            <option value="">Todas</option>
+        </select>
+
+        <label for="tamano">Tamaño:</label>
+        <select id="tamano">
+            <option value="">Todos</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <select id="color">
+            <option value="">Todos</option>
+        </select>
+
+        <button type="button" onclick="buscar_filtro()">Buscar</button>
+    </form>
+
+    <!-- Formulario CRUD -->
+    <h2>Crear/Editar Animal Post</h2>
+    <form id="animalForm">
+        <input type="hidden" id="postId">
+        <label>Animal ID:</label>
+        <input type="text" id="animalId" required>
+        <label>Status:</label>
+        <select id="status">
+            <option value="perdido">Perdido</option>
+            <option value="encontrado">Encontrado</option>
+            <option value="adoptado">Adoptado</option>
+            <option value="adopcion">Adopción</option>
+        </select>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <!-- Listado de Publicaciones -->
+    <h2>Listado de Animal Posts</h2>
+    <div id="animalPostsList"></div>
+
+<!-- PocketBase JS -->
+<script src="/js-sdk-master/dist/pocketbase.umd.js"></script>
+<!-- Tu archivo JS con la lógica para cargar publicaciones -->
+<script src="/Js/admin.js"></script>
+</body>
+</html>
