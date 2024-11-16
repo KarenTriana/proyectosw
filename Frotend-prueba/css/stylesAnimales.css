@@ -1,0 +1,362 @@
+.encontrado-animal {
+    position: relative;
+    background-image: url('/images/Rectangle\ 17586.jpg'); /* Aquí colocas la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Ajusta la altura según sea necesario */
+}
+
+.encontrado-animal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 para ajustar la opacidad, siendo 1 completamente opaco */
+    z-index: 1;
+}
+.overlayy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.overlayy h1 {
+    font-size: 2.5em;
+    color: #F5E5B8;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.overlayy p {
+    background-color: #F0D891;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    text-shadow: none;
+    font-size: 1.2em;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .encontrado-animal {
+        height: 200px;
+    }
+
+    .overlayy h1 {
+        font-size: 2em;
+    }
+
+    .overlayy p {
+        font-size: 1em;
+    }
+}
+
+/* Footer General */
+.footer {
+    background-color: #F5F5DC;
+    padding: 40px 20px;
+    color: #3F3D3B;
+    font-family: Arial, sans-serif;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    color: #BF985F;
+    margin-bottom: 15px;
+}
+
+.footer-section p, 
+.footer-section ul {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #3F3D3B;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #3F3D3B;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #BF985F;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #BF985F;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    color: #3F3D3B;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+    }
+}
+
+body{
+    background-color: #FBE5DA;
+}
+
+/* Estilo general de la barra de navegación */
+.navbar {
+
+    background: #F5F5DC !important;
+  }
+  
+  /* Estilo para el logo de la marca */
+  .navbar-brand img {
+    width: 200px; /* Ajusta el ancho del logo */
+    height: 60px; /* Ajusta el alto del logo */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+    
+  }
+  
+  /* Color y estilo de los enlaces */
+  .navbar-nav .nav-link {
+    color: #000 !important; /* Color de los enlaces */
+    font-weight: 500; /* Peso de fuente para mejor visibilidad */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f0d68b !important; /* Color al pasar el cursor */
+  }
+  
+  /* Color y estilo del enlace activo */
+  .navbar-nav .nav-link.active {
+    color: #f0d68b ;
+    font-weight: 600; /* Peso de fuente más fuerte para el enlace activo */
+  }
+  
+  /* Dropdown personalizado */
+  .dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1; /* Fondo al pasar el cursor en el dropdown */
+  }
+  
+  /* Estilo para el botón de colapso en dispositivos móviles */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  .titulo h2{
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 36px;
+    
+}
+
+.container.mt-5.text-center .btn-primary {
+    background-color: #F5F5DC;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px; /* Borde redondeado */
+    color: #BF985F; /* Color de la letra */
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+}
+
+.container.mt-5.text-center .btn-primary:hover {
+    background-color: #cdcdabc2;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+
+.publicaciones {
+    padding: 50px 0;
+}
+
+.publicaciones h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #BF985F; /* Color de los títulos */
+}
+
+#publicaciones-container .card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #F5F5DC; /* Fondo de la publicación */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#publicaciones-container .card:hover {
+    transform: translateY(-5px);
+}
+
+#publicaciones-container .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#publicaciones-container .card-body {
+    padding: 20px;
+}
+
+#publicaciones-container .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #BF985F; /* Color del nombre del animal */
+}
+
+#publicaciones-container .btn-primary {
+    background-color: #BF985F; /* Fondo del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.2s;
+    border-radius: 5px;
+    color: #fff; /* Color de la letra */
+}
+
+#publicaciones-container .btn-primary:hover {
+    background-color: #9C7A4C;
+}
+
+#publicaciones-container .btn-guardar {
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    color: #BF985F;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+
+#publicaciones-container .btn-guardar:hover {
+    color: #9C7A4C;
+}
+
+#filtros-form .form-label {
+    font-weight: bold;
+}
+
+#filtros-form .form-select,
+#filtros-form .form-control {
+    margin-bottom: 15px;
+}
+
+#filtros-form .btn-primary {
+    background-color: #62aeff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#filtros-form .btn-primary:hover {
+    background-color: #2a4d6f;
+}
+
+.filtros-busqueda {
+    background-color: #F5F5DC;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px; /* Separación del filtro de búsqueda */
+    padding-left: 20px; /* Mover el filtro de búsqueda hacia la derecha */
+}
+
+.filtros-busqueda .form-label {
+    color: #BF985F; /* Color café */
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.filtros-busqueda .form-label::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #BF985F; /* Color café */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.filtros-busqueda .form-check-input {
+    background-color: #BF985F; /* Color café */
+    border-color: #BF985F; /* Color café */
+}
+
+.filtros-busqueda .form-check-label {
+    color: #000; /* Color negro */
+}
+
+.filtros-busqueda .btn-primary {
+    background-color: #BF985F;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.filtros-busqueda .btn-primary:hover {
+    background-color: #9C7A4C;
+}
+
+.col-md-8 h2{
+    color: #BF985F;
+}
+
+.titulo h2 {
+    color: #BF985F;
+}
