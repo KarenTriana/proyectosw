@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="stylesCuenta.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/images/LOGO HOGAR DE HUELLAS (2) 1.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active me-5" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="animalesperdido.html">Animales Perdidos</a></li>
+                            <li><a class="dropdown-item" href="animalencontrado.html">Animales Encontrados</a></li>
+                            <li><a class="dropdown-item" href="animalesadopcion.html">Animales En Adopción</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto me-5"> <!-- Añadir ms-auto para alinear a la derecha -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mi Cuenta
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/vistas/miperfil.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="/vistas/mispublicaciones.html">Mis publicaciones</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Mi Perfil</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/default-profile.png" class="card-img-top" alt="Foto de perfil" id="foto-perfil">
+                    <div class="card-body">
+                        <h5 class="card-title" id="nombre-usuario">Nombre del Usuario</h5>
+                        <p class="card-text" id="correo-usuario">Correo: usuario@ejemplo.com</p>
+                        <p class="card-text" id="direccion-usuario">Dirección: Calle Falsa 123</p>
+                        <a href="#" class="btn btn-primary">Editar Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <form id="perfil-form">
+
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" value="Nombre del Usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="correo" value="usuario@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Número de Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" value="1234567890">
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" value="Calle Falsa 123">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipo-documento" class="form-label">Tipo de Documento</label>
+                        <select class="form-select" id="tipo-documento">
+                            <option value="cedula">Cédula</option>
+                            <option value="documento-identidad">Documento de Identidad</option>
+                            <option value="pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="numero-documento" class="form-label">Número de Documento</label>
+                        <input type="text" class="form-control" id="numero-documento" value="123456789">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contrasena" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena" value="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="foto" class="form-label">Foto de Perfil</label>
+                        <input type="file" class="form-control" id="foto">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </form>
+                <button id="eliminar-perfil" class="btn btn-danger mt-3">Eliminar mi perfil</button>
+            </div>
+        </div>
+    </div>
+     
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about-us">
+                <h3>Acerca de Nosotros</h3>
+                <p>Somos una comunidad dedicada a ayudar a los animales perdidos y en adopción, conectando a las personas con los animales que necesitan un hogar.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                        <li><a class="dropdown-item" href="animalesperdido.html">Animales Perdidos</a></li>
+                        <li><a class="dropdown-item" href="animalencontrado.html">Animales Encontrados</a></li>
+                        <li><a class="dropdown-item" href="animalesadopcion.html">Animales En Adopción</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-us">
+                <h3>Contáctanos</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle 62b #4b-80</li>
+                    <li><i class="fas fa-envelope"></i> hogarhuellas01@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +57 310 6238277</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Kleanimals | Diseñado por Kleanimals | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+
+    <!-- JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- JavaScript personalizado -->
+
+</body>
+</html>
