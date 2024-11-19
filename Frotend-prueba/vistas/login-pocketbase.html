@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/vista/index-pocketbase.html">
+                <img src="/images/LOGO HOGAR DE HUELLAS (2) 1.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active me-5" aria-current="page" href="/vista/index-pocketbase.html">Inicio</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link me-5" href="/vista/login-pocketbase.html">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5" href="/vista/registro-pocketbase.html">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario de Inicio de Sesión -->
+    <section class="formulario">
+        <div class="formulario-content">
+            <div class="tituloform">
+                <h2>Iniciar Sesión</h2>
+            </div>
+            <form id="login-form" method="POST">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Ingresa tu correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Ingresa tu contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <br>
+                <a class="ayuda" href="/vista/enviar_correo_reestablecer_contraseña.html">He olvidado mi contraseña</a>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+            <p id="error-message" class="error-message" style="color: red;"></p> <!-- Mensaje de error -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about-us">
+                <h3>Acerca de Nosotros</h3>
+                <p>Somos una comunidad dedicada a ayudar a los animales perdidos y en adopción, conectando a las personas con los animales que necesitan un hogar.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="/vista/index-pocketbase.html">Inicio</a></li>
+                    <li><a href="/vista/animalesencontrados-pocketbase.html">Animales Encontrados</a></li>
+                    <li><a href="/vista/animalesperdidos-pocketbase.html">Animales Perdidos</a></li>
+                    <li><a href="/vista/animalesadopcion-pocketbase.html">Animales en Adopción</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-us">
+                <h3>Contáctanos</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle 62b #4b-80</li>
+                    <li><i class="fas fa-envelope"></i> kleanimalshogar@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +57 310 6238277</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Kleanimals | Diseñado por Kleanimals | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="/js-sdk-master/dist/pocketbase.umd.js"></script>
+    <!-- JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Archivos JS personalizados -->
+    <script src="/Js/login.js"></script>
+</body>
+</html>
