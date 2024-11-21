@@ -1,0 +1,304 @@
+
+
+
+body{
+    
+    background: #FBE5DA; 
+
+}
+
+
+/* Estilo general de la barra de navegación */
+.navbar {
+    background: #F5F5DC !important;
+  }
+  
+  /* Estilo para el logo de la marca */
+  .navbar-brand img {
+    width: 200px; /* Ajusta el ancho del logo */
+    height: 60px; /* Ajusta el alto del logo */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+    
+  }
+  
+  /* Color y estilo de los enlaces */
+  .navbar-nav .nav-link {
+    color: #000; /* Color de los enlaces */
+    font-weight: 500; /* Peso de fuente para mejor visibilidad */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f0d68b; /* Color al pasar el cursor */
+  }
+  
+  /* Color y estilo del enlace activo */
+  .navbar-nav .nav-link.active {
+    color: #f0d68b;
+    font-weight: 600; /* Peso de fuente más fuerte para el enlace activo */
+  }
+  
+  /* Dropdown personalizado */
+  .dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1; /* Fondo al pasar el cursor en el dropdown */
+  }
+  
+  /* Estilo para el botón de colapso en dispositivos móviles */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/* Footer General */
+.footer {
+    background-color: #F5F5DC;
+    padding: 40px 20px;
+    color: #3F3D3B;
+    font-family: Arial, sans-serif;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    color: #BF985F;
+    margin-bottom: 15px;
+}
+
+.footer-section p, 
+.footer-section ul {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #3F3D3B;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #3F3D3B;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #BF985F;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #BF985F;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    color: #3F3D3B;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+    }
+}
+
+
+  
+h3, h2 {
+    color: #BF985F;
+    font-size: 15px;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #BF985F;
+    font-size: 25px;
+}
+
+h2, label, .form-check-label {
+    color: #BF985F;
+}
+
+
+/* Botón Editar */
+.btn-editar {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    border: none; /* Quita el borde */
+}
+
+.btn-editar:hover {
+    background-color: #45a049; /* Color al pasar el mouse */
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+    background-color: #f44336; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    border: none; /* Quita el borde */
+}
+
+.btn-eliminar:hover {
+    background-color: #d32f2f; /* Color al pasar el mouse */
+}
+
+/* Botón Guardar Publicación */
+.btn-guardar {
+    background-color: #ff4081; /* Rosa */
+    color: white;
+    border: none;
+}
+
+.btn-guardar:hover {
+    background-color: #e91e63; /* Rosa oscuro */
+}
+
+/* Botón Compartir */
+.btn-compartir {
+    background-color: #2196f3; /* Azul */
+    color: white;
+    border: none;
+}
+
+.btn-compartir:hover {
+    background-color: #1976d2; /* Azul oscuro */
+}
+
+/* Botón Reportar */
+.btn-reportar {
+    background-color: #ff9800; /* Naranja */
+    color: white;
+    border: none;
+}
+
+.btn-reportar:hover {
+    background-color: #f57c00; /* Naranja oscuro */
+}
+
+/* Cambiar el color de fondo de la sección del perfil de adopción */
+.animal-profile {
+    background-color: #F5F5DC;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Deja que el contenedor crezca con el contenido */
+    margin: 20px 0;
+}
+
+
+.animal-profile h2 {
+    color: rgb(191, 152, 95); /* Cambiamos el color del nombre del animal */
+    font-size: 1.5em; /* Tamaño de fuente mayor */
+    margin-bottom: 10px; /* Espaciado debajo del título */
+}
+
+.animal-profile p {
+    margin: 1em 0; /* Espaciado de párrafos */
+    font-size: 1em; /* Tamaño de fuente aumentado */
+    line-height: 1.5; /* Espaciado entre líneas */
+    word-wrap: break-word; /* Para asegurar que el texto no se desborde */
+}
+
+.animal-profile .info {
+    margin-top: 20px; /* Espacio entre las secciones */
+}
+
+.animal-profile p {
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.animal-detalle-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    
+}
+
+.image-container {
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Que el contenedor se ajuste al 100% del espacio disponible */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto; /* Mantendrá la proporción original */
+    max-width: 500px; /* Limita el ancho máximo de la imagen */
+    max-height: 500px; /* Limita la altura máxima de la imagen */
+    object-fit: contain; /* Evita el recorte y mantiene la proporción */
+    border-radius: 8px;
+}
+
+.btn-maps {
+    display: inline-block;
+    background-color: #B2D8B2; /* Color verde pastel */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-maps:hover {
+    background-color: #A2CFA2; /* Color más oscuro al pasar el cursor */
+}
+
+.btn-maps:active {
+    background-color: #91B991; /* Color al hacer clic */
+}
+
+.help-link {
+    font-size: 16px; /* Aumentar tamaño para hacerlo más visible */
+    color: #BF985F; /* Color dorado */
+    text-decoration: none; /* Quitar subrayado */
+    font-weight: bold; /* Hacer el texto en negrita */
+    margin-left: 5px; /* Espaciado respecto al título */
+    cursor: pointer;
+}
+
+.help-link:hover {
+    color: #800080; /* Color morado al pasar el cursor */
+}
