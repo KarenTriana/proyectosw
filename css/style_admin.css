@@ -1,0 +1,305 @@
+body {
+    background: #FBE5DA;
+}
+
+/* Estilo general de la barra de navegación */
+.navbar {
+    background: #F5F5DC !important;
+}
+
+/* Estilo para el logo de la marca */
+.navbar-brand img {
+    width: 200px; /* Ajusta el ancho del logo */
+    height: 60px; /* Ajusta el alto del logo */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+/* Color y estilo de los enlaces */
+.navbar-nav .nav-link {
+    color: #000 !important; /* Color de los enlaces */
+    font-weight: 500; /* Peso de fuente para mejor visibilidad */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f0d68b !important; /* Color al pasar el cursor */
+}
+
+/* Color y estilo del enlace activo */
+.navbar-nav .nav-link.active {
+    color: #f0d68b !important;
+    font-weight: 600; /* Peso de fuente más fuerte para el enlace activo */
+}
+
+/* Dropdown personalizado */
+.dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1; /* Fondo al pasar el cursor en el dropdown */
+}
+
+/* Estilo para el botón de colapso en dispositivos móviles */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Footer General */
+.footer {
+    background-color: #F5F5DC;
+    padding: 40px 20px;
+    color: #3F3D3B;
+    font-family: Arial, sans-serif;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    color: #BF985F;
+    margin-bottom: 15px;
+}
+
+.footer-section p, 
+.footer-section ul {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #3F3D3B;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #3F3D3B;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #BF985F;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #BF985F;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    color: #3F3D3B;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+    }
+}
+
+/* Títulos */
+h3, h2 {
+    color: #BF985F;
+    font-size: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+h2, label, .form-check-label {
+    color: #BF985F;
+}
+
+/* En style_admin.css */
+.custom-card-width {
+    max-width: 1000px;
+    width: 150%;
+}
+
+.custom-container {
+    max-width: 1000px; /* Ajusta el ancho máximo */
+    min-height: 700px; /* Ajusta el alto mínimo */
+    background-color: #F5F5DC; /* Color de fondo */
+    padding: 500px; /* Espaciado interno */
+}
+
+/* Estilos para el formulario de registro */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #f0d68b;
+}
+
+form .required {
+    color: red;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+/* Botón de envío */
+form button {
+    background-color: #f0d68b;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e0c774;
+}
+
+/* Asterisco para campos requeridos */
+form label .required {
+    font-size: 18px;
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .custom-container {
+        padding: 20px;
+    }
+    
+    .custom-card-width {
+        width: 100%;
+    }
+}
+
+
+/* Botones de acción (editar/eliminar) */
+.btn-custom {
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Color específico para editar y eliminar */
+.btn-warning {
+    background-color: #f0d68b;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: #e0c774;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+/* Estilo para la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #BF985F;
+    color: #fff;
+}
+
+
+/* Asegurando que los select tengan el estilo adecuado */
+.select-custom {
+    -webkit-appearance: none;  /* Eliminando el estilo predeterminado de los navegadores */
+    -moz-appearance: none;     /* Eliminando el estilo predeterminado de Firefox */
+    appearance: none;          /* Eliminando el estilo predeterminado */
+    background-color: #F5F5DC;
+    border: 2px solid #BF985F;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;  /* Asegurando que se expandan al máximo del contenedor */
+    font-size: 16px;
+    color: #555;
+    position: relative; /* Aseguramos que el contenedor tenga posición relativa */
+}
+
+/* Agregando una flecha personalizada a la derecha */
+.select-custom::after {
+    content: ' ▼';
+    font-size: 18px;
+    color: #BF985F;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* No interfiere con la interacción del select */
+}
+
+/* Asegurando que el contenedor tenga posición relativa */
+.form-group {
+    position: relative;
+}

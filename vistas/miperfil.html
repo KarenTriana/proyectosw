@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <!-- CSS de Bootstrap y otros estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/stylesCuenta.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/vista/index-pocketbase.html">
+                <img src="/images/LOGO HOGAR DE HUELLAS (2) 1.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active me-5" aria-current="page" href="/vista/index-pocketbase.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/vista/animalesperdidos-pocketbase.html">Animales Perdidos</a></li>
+                            <li><a class="dropdown-item" href="/vista/animalesencontrados-pocketbase.html">Animales Encontrados</a></li>
+                            <li><a class="dropdown-item" href="/vista/animalesadopcion-pocketbase.html">Animales En Adopción</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mi Cuenta
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/vista/miperfil.html">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="/vista/mispublicaciones.html">Mis publicaciones</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);" id="logout">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Mi Perfil</h1>
+        <div class="avatar-container">
+            <img id="avatar" src="/images/default-avatar.jpg" alt="Avatar" class="avatar">
+            <button id="cambiarAvatarBtn" class="btn btn-primary">Cambiar mi Foto de Perfil</button>
+            <input type="file" id="avatarInput" style="display: none;">
+        </div>
+
+        <form id="perfilForm" class="mt-4">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo <span class="required">*</span></label>
+                <input type="text" class="form-control" id="nombre" name="nombre" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email <span class="required">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="telefono" name="telefono" disabled>
+            </div>
+            <button type="button" class="btn btn-secondary" id="editarBtn">Editar</button>
+            <button type="submit" class="btn btn-success" id="guardarBtn" disabled>Guardar Cambios</button>
+        </form>
+
+        <!-- Cambiar Contraseña -->
+        <div id="cambiarContrasenaDiv" class="hidden mt-5">
+            <h2>Cambiar Contraseña</h2>
+            <form id="cambiarContrasenaForm">
+                <div class="mb-3">
+                    <label for="contrasenaActual" class="form-label">Contraseña Actual</label>
+                    <input type="password" class="form-control" id="contrasenaActual" name="contrasenaActual" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nuevaContrasena" class="form-label">Nueva Contraseña</label>
+                    <input type="password" class="form-control" id="nuevaContrasena" name="nuevaContrasena" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirmarContrasena" class="form-label">Confirmar Nueva Contraseña</label>
+                    <input type="password" class="form-control" id="confirmarContrasena" name="confirmarContrasena" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cambiar Contraseña</button>
+            </form>
+        </div>
+
+       <!-- Eliminar Cuenta -->
+       <br><h2>Eliminar Cuenta</h2>
+       <div id="eliminarCuentaContainer">
+        <p><strong>Al eliminar tu cuenta, perderás acceso a todos los servicios y datos asociados con ella.</strong></p>
+        <button id="eliminarCuentaBtn" class="btn btn-danger">Eliminar Cuenta</button>
+    </div><br>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+                <div class="footer-section about-us">
+                    <h3>Acerca de Nosotros</h3>
+                    <p>Somos una comunidad dedicada a ayudar a los animales perdidos y en adopción, conectando a las personas con los animales que necesitan un hogar.</p>
+                </div>
+                <div class="footer-section about-us">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="/vista/index-pocketbase.html">Inicio</a></li>
+                        <li><a href="/vista/animalesencontrados-pocketbase.html">Animales Encontrados</a></li>
+                        <li><a href="/vista/animalesperdidos-pocketbase.html">Animales Perdidos</a></li>
+                        <li><a href="/vista/animalesadopcion-pocketbase.html">Animales en Adopción</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contáctanos</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle 62b #4b-80</li>
+                        <li><i class="fas fa-envelope"></i> kleanimalshogar@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +57 310 6238277</li>
+                    </ul>
+                </div>
+        </div>
+    </footer>
+
+
+    <script src="/js-sdk-master/dist/pocketbase.umd.js"></script>
+    <!-- Tu archivo JS con la lógica para cargar publicaciones -->
+     <script src="/Js/perfil.js"></script>
+    <!-- JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- JavaScript personalizado -->
+
+</body>
+</html>
