@@ -1,5 +1,5 @@
 // Inicializa PocketBase con la URL de tu servidor
-const pb = new PocketBase('http://127.0.0.1:8090'); // Cambia esta URL si estás en producción
+const pb = new PocketBase('https://pocketbase-1-59y6.onrender.com'); // Cambia esta URL si estás en producción
 
 // Referencia al formulario
 const resetPasswordForm = document.getElementById('resetPasswordForm');
