@@ -1,4 +1,4 @@
-const pb = new PocketBase('https://pocketbase-1-59y6.onrender.com'); // Cambia la URL si es necesario
+const pb = new PocketBase('https://pocketbase-a87z.onrender.com'); // Cambia la URL si es necesario
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {

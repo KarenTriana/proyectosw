@@ -1,4 +1,4 @@
-const pb = new PocketBase('https://pocketbase-1-59y6.onrender.com'); // URL de tu servidor PocketBase
+const pb = new PocketBase('https://pocketbase-a87z.onrender.com'); // URL de tu servidor PocketBase
 
 emailjs.init('ao5KBCWaPjMyf-LVS'); // Reemplaza 'your_user_id' con tu User ID de EmailJS
 

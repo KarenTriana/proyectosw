@@ -1,5 +1,5 @@
 // Inicializa PocketBase
-const pb = new PocketBase('https://pocketbase-1-59y6.onrender.com'); // Cambia a la URL de tu servidor PocketBase
+const pb = new PocketBase('https://pocketbase-a87z.onrender.com'); // Cambia a la URL de tu servidor PocketBase
 pb.autoCancellation(false); // Desactiva la autocancelación
 
 // Función para actualizar los enlaces de autenticación

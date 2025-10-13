@@ -1,5 +1,5 @@
 // script.js
-const pb = new PocketBase('https://pocketbase-1-59y6.onrender.com'); // URL de tu servidor PocketBase
+const pb = new PocketBase('https://pocketbase-a87z.onrender.com'); // URL de tu servidor PocketBase
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Cargar el token desde localStorage al authStore de PocketBase

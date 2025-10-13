@@ -1,4 +1,4 @@
-const pb = new PocketBase('https://pocketbase-1-59y6.onrender.com');
+const pb = new PocketBase('https://pocketbase-a87z.onrender.com');
 
 // Función para verificar la autenticación y redirigir si no está autenticado
 export default function verificarAutenticacion() {

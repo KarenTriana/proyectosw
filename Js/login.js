@@ -1,4 +1,4 @@
-const pb = new PocketBase('https://pocketbase-1-59y6.onrender.com'); // Cambia a la URL de tu servidor PocketBase
+const pb = new PocketBase('https://pocketbase-a87z.onrender.com'); // Cambia a la URL de tu servidor PocketBase
 
 // Verificar si hay un token en LocalStorage y autenticar al usuario automáticamente
 const token = localStorage.getItem('pb_token');
