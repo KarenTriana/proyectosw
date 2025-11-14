@@ -53,6 +53,7 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
         return;
     }
 
+    /*
     // Validar que el número de documento tenga entre 8 y 15 dígitos
     const docRegex = /^\d{8,15}$/;
     if (!docRegex.test(numero_documento)) {
@@ -66,7 +67,7 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
     errorMessage.textContent = 'El número de documento ya está registrado.';
     return;
     }
-
+    */
 
     try {
         console.log('Registrando usuario con los siguientes datos:', {
@@ -76,8 +77,8 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
             name,
             telefono: phone,
             direccion,
-            tipo_documento,
-            numero_documento,
+            /*tipo_documento,
+            numero_documento,*/
         });
 
         // Crear un nuevo usuario en la colección `users`
@@ -89,8 +90,8 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
             name: name,
             telefono: phone,
             direccion: direccion,
-            tipo_documento: tipo_documento,
-            numero_documento: numero_documento, 
+            /*tipo_documento: tipo_documento,
+            numero_documento: numero_documento, */
             role: 'usuario',
             emailVisibility: true
         });
@@ -116,10 +117,10 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
             if (error.response.data.email) {
                 errorMessage.textContent = 'El correo electrónico es inválido o ya está registrado.';
             } 
-            // Manejar el error de tipo_documento inválido
+            /*// Manejar el error de tipo_documento inválido
             else if (error.response.data.tipo_documento) {
                 errorMessage.textContent = 'El tipo de documento es inválido. Por favor, elige una opción válida.';
-            } 
+            } */
             // Manejar el error de username ya en uso
             else if (error.response.data.username) {
                 errorMessage.textContent = 'El nombre de usuario ya está registrado. Elige otro.';
