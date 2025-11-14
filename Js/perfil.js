@@ -1,7 +1,7 @@
 const pb = new PocketBase('https://pocketbase-a87z.onrender.com'); // URL de tu servidor PocketBase
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const pb = new PocketBase('http://127.0.0.1:8090');
+    const pb = new PocketBase('https://pocketbase-a87z.onrender.com');
     const token = localStorage.getItem('pb_token');
 
     // Redirigir al login si no hay token
