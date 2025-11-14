@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Verificar si hay un usuario autenticado
     const usuario = pb.authStore.model;
+
     if (usuario) {
         console.log("Usuario autenticado:", usuario);
     } else {
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Verificar si el usuario tiene un avatar y actualizar el elemento de la imagen
     if (usuario.avatar) {
         // Construir la URL pública del avatar almacenado en PocketBase
-        const avatarUrl = `http://127.0.0.1:8090/api/files/users/${usuario.id}/${usuario.avatar.split('/').pop()}`;
+        const avatarUrl = `http://pocketbase-a87z.onrender.com/api/files/users/${usuario.id}/${usuario.avatar.split('/').pop()}`;
         document.getElementById('avatar').src = avatarUrl;
     } else {
         // Si no hay avatar, usar el avatar por defecto
@@ -72,11 +73,11 @@ document.getElementById('avatarInput').addEventListener('change', async (e) => {
 
         // Construir la URL pública del archivo almacenado
         // Suponiendo que la imagen se guarda en _pb_users_auth_ o storage
-        const avatarUrl = `http://127.0.0.1:8090/api/files/users/${usuario.id}/${avatarFile.avatar}`; // Aquí usamos la URL pública
+        const avatarUrl = `http://pocketbase-a87z.onrender.com/api/files/users/${usuario.id}/${avatarFile.avatar}`; // Aquí usamos la URL pública
 
         // Si la URL viene con un token, tal vez necesites reemplazarla por la URL pública
         if (usuario.avatar && usuario.avatar.includes('api/files')) {
-            const avatarUrl = `http://127.0.0.1:8090/api/files/users/${usuario.id}/${usuario.avatar.split('/').pop()}`;
+            const avatarUrl = `http://pocketbase-a87z.onrender.com/api/files/users/${usuario.id}/${usuario.avatar.split('/').pop()}`;
         }
 
         // Actualiza la vista con la nueva imagen
