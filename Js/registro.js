@@ -20,11 +20,18 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
     const confirmPassword = document.getElementById('confirmPassword').value;
  
  // Verificar si el correo ya está registrado
- const emailExists = await pb.collection('users').getList(1, 1, { filter: `email="${email}"` });
- if (emailExists.items.length > 0) {
-     errorMessage.textContent = 'El correo electrónico ya está registrado.';
-     return;
- }
+try {
+    await pb.collection('users').getFirstListItem(`email="${email}"`);
+    errorMessage.textContent = 'El correo electrónico ya está registrado.';
+    return;
+} catch (err) {
+    // Si no existe, cae aquí
+    if (err.status === 404) {
+        console.log("Correo no registrado, continuar...");
+    } else {
+        console.error(err);
+    }
+}
 
  // Verificar si el nombre de usuario ya está registrado
  const usernameExists = await pb.collection('users').getList(1, 1, { filter: `username="${username}"` });
