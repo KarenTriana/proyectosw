@@ -1,27 +1,30 @@
 const pb = new PocketBase('https://pocketbase-a87z.onrender.com'); // URL de tu servidor PocketBase
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const pb = new PocketBase('https://pocketbase-a87z.onrender.com');
+    // Cargar el token desde localStorage al authStore de PocketBase
     const token = localStorage.getItem('pb_token');
-
-    // Redirigir al login si no hay token
-    if (!token) {
-        window.location.href = '/vista/login-pocketbase.html';
-        return;
+    if (token) {
+        pb.authStore.save(token); // Guardar el token en el authStore
     }
 
-    // Restaurar la autenticación con el token
-    pb.authStore.save(token);
+    // Actualizar la sesión para cargar el modelo del usuario
     try {
-        await pb.collection('users').authRefresh();
+        await pb.collection('users').authRefresh(); // Refrescar el modelo del usuario en authStore.model
     } catch (error) {
-        console.error('Error al refrescar la autenticación:', error);
-        localStorage.removeItem('pb_token');
-        window.location.href = '/vista/login-pocketbase.html';
+        console.error("Error al refrescar la autenticación:", error);
+        localStorage.removeItem('pb_token');  // Elimina el token si no es válido
+        window.location.href = '/vista/login-pocketbase.html';  // Redirigir a la página de login
         return;
     }
 
-    const usuario = pb.authStore.model; 
+    // Verificar si hay un usuario autenticado
+    const usuario = pb.authStore.model;
+    if (usuario) {
+        console.log("Usuario autenticado:", usuario);
+    } else {
+        console.log("No se pudo cargar el usuario.");
+        window.location.href = '/vista/login-pocketbase.html';  // Redirigir si no se puede cargar el usuario
+    }
 
     
     // Verificar si el usuario tiene un avatar y actualizar el elemento de la imagen
