@@ -109,7 +109,7 @@ function mostrarDetallesAnimal(animal, animalPost, locationDetails) {
                 <p><strong>Tamaño:</strong> ${animal.tamano || 'No disponible'}</p>
                 <p><strong>Sexo:</strong> ${animal.sexo || 'No disponible'}</p>
                 <p><strong>Color:</strong> ${animal.color || 'No disponible'}</p>
-                <P><strong>Pelaje:</strong> ${animal.patrones || 'No disponible'}</P>
+                <P><strong>Patrones:</strong> ${animal.patrones || 'No disponible'}</P>
                 <p><strong>Raza:</strong> ${animal.raza || 'No disponible'}</p>
                 <p><strong>Descripción:</strong> ${animal.description || 'No disponible'}</p>
         
